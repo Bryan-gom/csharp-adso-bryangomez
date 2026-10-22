@@ -1,0 +1,32 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "C#: Reto (.NET Core)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/Sesion01/Reto/bin/Debug/net8.0/Reto.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Sesion01/Reto",
+            "console": "integratedTerminal",
+            "stopAtEntry": false
+        },
+        {
+            "name": "C#: Reto (Consola interna)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/Sesion01/Reto/bin/Debug/net8.0/Reto.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Sesion01/Reto",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": "C#: Attach to Process",
+            "type": "coreclr",
+            "request": "attach"
+        }
+    ]
+}
