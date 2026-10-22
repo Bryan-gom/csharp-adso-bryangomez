@@ -36,6 +36,18 @@
                 "${workspaceFolder}/Sesion01/Reto/Reto.csproj"
             ],
             "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "build-tarea",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/Sesion01/Tarea/Tarea.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary;ForceNoAlign"
+            ],
+            "problemMatcher": "$msCompile"
         }
     ]
 }

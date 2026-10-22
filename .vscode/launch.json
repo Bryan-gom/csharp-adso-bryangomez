@@ -2,6 +2,17 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "C#: Tarea (.NET Core)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-tarea",
+            "program": "${workspaceFolder}/Sesion01/Tarea/bin/Debug/net8.0/Tarea.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Sesion01/Tarea",
+            "console": "integratedTerminal",
+            "stopAtEntry": false
+        },
+        {
             "name": "C#: Reto (.NET Core)",
             "type": "coreclr",
             "request": "launch",
