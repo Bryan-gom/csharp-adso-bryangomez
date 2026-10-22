@@ -2,10 +2,21 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "C#: Tarea (.NET Core)",
+            "name": "C#: Sesión 01 - Reto (Propinas)",
             "type": "coreclr",
             "request": "launch",
-            "preLaunchTask": "build-tarea",
+            "preLaunchTask": "build-sesion01-reto",
+            "program": "${workspaceFolder}/Sesion01/Reto/bin/Debug/net8.0/Reto.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Sesion01/Reto",
+            "console": "integratedTerminal",
+            "stopAtEntry": false
+        },
+        {
+            "name": "C#: Sesión 01 - Tarea (3 Ejercicios)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-sesion01-tarea",
             "program": "${workspaceFolder}/Sesion01/Tarea/bin/Debug/net8.0/Tarea.dll",
             "args": [],
             "cwd": "${workspaceFolder}/Sesion01/Tarea",
@@ -13,31 +24,26 @@
             "stopAtEntry": false
         },
         {
-            "name": "C#: Reto (.NET Core)",
+            "name": "C#: Sesión 02 - Reto (Cajero)",
             "type": "coreclr",
             "request": "launch",
-            "preLaunchTask": "build",
-            "program": "${workspaceFolder}/Sesion01/Reto/bin/Debug/net8.0/Reto.dll",
+            "preLaunchTask": "build-sesion02-reto",
+            "program": "${workspaceFolder}/Sesion02/Reto/bin/Debug/net8.0/Reto.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/Sesion01/Reto",
+            "cwd": "${workspaceFolder}/Sesion02/Reto",
             "console": "integratedTerminal",
             "stopAtEntry": false
         },
         {
-            "name": "C#: Reto (Consola interna)",
+            "name": "C#: Sesión 02 - Tarea (Adivina el Número)",
             "type": "coreclr",
             "request": "launch",
-            "preLaunchTask": "build",
-            "program": "${workspaceFolder}/Sesion01/Reto/bin/Debug/net8.0/Reto.dll",
+            "preLaunchTask": "build-sesion02-tarea",
+            "program": "${workspaceFolder}/Sesion02/Tarea/bin/Debug/net8.0/Tarea.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/Sesion01/Reto",
-            "console": "internalConsole",
+            "cwd": "${workspaceFolder}/Sesion02/Tarea",
+            "console": "integratedTerminal",
             "stopAtEntry": false
-        },
-        {
-            "name": "C#: Attach to Process",
-            "type": "coreclr",
-            "request": "attach"
         }
     ]
 }

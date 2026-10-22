@@ -1,42 +1,34 @@
-# Sesión 01 - Reto: Tarjeta de Presentación en C#
+# Sesión 01 - Reto: Calculadora de Propinas
 
-Este proyecto corresponde al reto práctico de la Sesión 01 para el programa de formación **Análisis y Desarrollo de Software (ADSO)** del SENA.
-
----
-
-## Requerimientos cumplidos
-
-1. **Captura de al menos 4 datos por consola**:
-   - Nombre completo
-   - Programa de formación
-   - Número de ficha
-   - Frase representativa
-2. **Tarjeta con bordes e interpolación**:
-   - Borde rectangular simétrico (`╔═╗`, `║`, `╚═╝`).
-   - Interpolación de variables de cadena (`$""`).
-   - Formateo y ajuste de texto automático para evitar que se rompan los bordes.
-3. **Uso de múltiples colores de consola**:
-   - `ConsoleColor.DarkCyan` (Encabezado general)
-   - `ConsoleColor.Yellow` (Preguntas de captura de datos)
-   - `ConsoleColor.Green` (Bordes y separadores de la tarjeta)
-   - `ConsoleColor.Cyan` (Título de la tarjeta)
-   - `ConsoleColor.White` (Información del aprendiz)
-   - `ConsoleColor.Magenta` (Mensaje de finalización)
-4. **Comentarios explicativos**:
-   - Cada sección del código cuenta con comentarios claros y detallados.
+Este proyecto corresponde al reto práctico oficial de la **Sesión 01** para el programa de formación **Análisis y Desarrollo de Software (ADSO)** del SENA.
 
 ---
 
-## Captura de la Consola en Ejecución
+## Descripción del Reto
+El programa solicita al usuario:
+1. El **total de la cuenta**.
+2. El **porcentaje de propina** deseado (por ejemplo, 10%).
+3. El **número de personas** entre las cuales se dividirá la cuenta.
 
-![Captura Consola Reto](captura_consola_reto.png)
+Calcula y presenta en consola:
+- El valor de la propina calculada.
+- El valor total a pagar (cuenta + propina).
+- El valor que le corresponde pagar a cada persona.
+
+---
+
+## Requerimientos y Buenas Prácticas Aplicadas
+- **Lectura segura con `TryParse`**: Valida que las entradas numéricas sean válidas evitando que el programa se caiga si se escriben letras o valores inválidos.
+- **Formato de moneda (`:C0`)**: Muestra los valores numéricos formateados en pesos colombianos.
+- **Mensajes claros y amables**: Informa al usuario si ingresa un valor no válido.
+- **Estilos con color**: Utiliza `ConsoleColor` (`Cyan`, `Green`, `Red`) para mejorar la experiencia visual en la consola.
+- **Instrucciones de nivel superior**: Código limpio y directo acorde a las pautas de C# y .NET 8.
 
 ---
 
 ## Cómo ejecutar el proyecto
 
-Desde una terminal situada en esta carpeta:
-
+Desde una terminal en esta carpeta:
 ```bash
 dotnet run
 ```

@@ -1,86 +1,42 @@
-# Sesión 01 - Tarea: Programa "Bienvenida" Traducido de Python a C#
+# Sesión 01 - Tarea: Ejercicios Prácticos de Consolidación
 
-Este proyecto corresponde a la **Tarea** de la Sesión 01 para el programa de formación **Análisis y Desarrollo de Software (ADSO)** del SENA.
-
-Consiste en la traducción y adaptación a C# (.NET 8) del programa inicial de "Bienvenida" concebido originalmente en Python.
+Este proyecto corresponde a la **Tarea** oficial de la **Sesión 01** para el programa de formación **Análisis y Desarrollo de Software (ADSO)** del SENA.
 
 ---
 
-## Comparativa de Implementación
+## Ejercicios Desarrollados
 
-### Código Original (Python)
+### 1. Segundos a Reloj (Uso de operadores `/` y `%`)
+- **Descripción**: Solicita una cantidad total de segundos y la convierte al formato `X h Y min Z s`.
+- **Ejemplo**: `3725` segundos equivalen a `1 h 2 min 5 s`.
+- **Lógica aplicada**:
+  - Horas: `totalSegundos / 3600`
+  - Minutos: `(totalSegundos % 3600) / 60`
+  - Segundos restantes: `totalSegundos % 60`
 
-```python
-# Programa Bienvenida en Python
-print("SISTEMA DE BIENVENIDA - ADSO SENA")
+### 2. Conversor de Temperatura (°C a °F)
+- **Descripción**: Solicita la temperatura en grados Celsius y la convierte a grados Fahrenheit.
+- **Fórmula**: `F = C * 9 / 5 + 32`
+- **Validación**: Uso de `double.TryParse` para asegurar una entrada numérica válida.
+- **Formato**: Salida con 1 decimal (`:N1`).
 
-nombre = input("Por favor, ingresa tu nombre completo: ")
-programa = input("Ingresa tu programa de formación: ")
-ficha = input("Ingresa tu número de ficha: ")
-
-print(f"\n¡Bienvenido/a, {nombre}!")
-print(f"Has ingresado satisfactoriamente al programa {programa} (Ficha: {ficha}).")
-print("Este programa fue traducido desde Python a C# utilizando .NET 8.")
-```
-
-### Código Traducido (C# / .NET 8)
-
-```csharp
-using System;
-
-// 1. Mensaje de bienvenida inicial
-Console.ForegroundColor = ConsoleColor.Cyan;
-Console.WriteLine("SISTEMA DE BIENVENIDA - ADSO SENA");
-Console.ResetColor();
-
-// 2. Captura de datos por consola
-Console.Write("\nPor favor, ingresa tu nombre completo: ");
-string? entradaNombre = Console.ReadLine();
-string nombre = string.IsNullOrWhiteSpace(entradaNombre) ? "Bryan Gómez" : entradaNombre.Trim();
-
-Console.Write("Ingresa tu programa de formación: ");
-string? entradaPrograma = Console.ReadLine();
-string programa = string.IsNullOrWhiteSpace(entradaPrograma) ? "Análisis y Desarrollo de Software (ADSO)" : entradaPrograma.Trim();
-
-Console.Write("Ingresa tu número de ficha: ");
-string? entradaFicha = Console.ReadLine();
-string ficha = string.IsNullOrWhiteSpace(entradaFicha) ? "2826901" : entradaFicha.Trim();
-
-// 3. Saludo personalizado con interpolación ($\"...\")
-Console.ForegroundColor = ConsoleColor.Green;
-Console.WriteLine($"\n¡Bienvenido/a, {nombre}!");
-Console.ResetColor();
-
-Console.WriteLine($"Has ingresado satisfactoriamente al programa {programa} (Ficha: {ficha}).");
-Console.WriteLine("Este programa fue traducido desde Python a C# utilizando .NET 8.\n");
-```
+### 3. Promedio de 3 Notas
+- **Descripción**: Solicita tres notas en rango de 0,0 a 5,0 mediante `double.TryParse`.
+- **Resultado**: Calcula la media aritmética y la muestra formateada con un decimal (`{promedio:N1}`).
 
 ---
 
-## Conceptos Aplicados en la Traducción
-
-1. **Entrada y Salida estándar:**
-   - De `input()` en Python a `Console.Write()` y `Console.ReadLine()` en C#.
-   - De `print()` en Python a `Console.WriteLine()` en C#.
-2. **Tipado Estático y Seguridad frente a Nulos:**
-   - Uso de `string?` y validación con `string.IsNullOrWhiteSpace()`.
-3. **Interpolación de Cadenas:**
-   - De cadenas f-strings (`f"..."`) en Python a cadenas interpoladas (`$"..."`) en C#.
-4. **Estilo y Colores en Consola:**
-   - Uso de `Console.ForegroundColor` y `Console.ResetColor()`.
-
----
-
-## Captura del Programa en Ejecución
-
-![Captura Consola Tarea](captura_consola_tarea.png)
+## Requerimientos y Buenas Prácticas Aplicadas
+- **Lectura segura con `TryParse`**: Evita excepciones de formato si el usuario escribe letras o formatos incorrectos.
+- **Tipos de datos adecuados**: Uso de `int` para tiempo/segundos y `double` para temperaturas y calificaciones.
+- **Estilos de consola**: Colores `Cyan`, `Yellow`, `Green` y `Red` para diferenciar secciones, entradas, resultados y mensajes de error.
+- **Instrucciones de nivel superior**: Código limpio y legible en C# / .NET 8.
 
 ---
 
 ## Cómo ejecutar el proyecto
 
 Desde una terminal en esta carpeta:
-
 ```bash
 dotnet run
 ```
