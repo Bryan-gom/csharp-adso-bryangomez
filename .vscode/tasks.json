@@ -3,7 +3,7 @@
     "tasks": [
         {
             "label": "build-sesion01-reto",
-            "command": "dotnet",
+            "command": "/home/bryan/.dotnet/dotnet",
             "type": "process",
             "args": [
                 "build",
@@ -15,7 +15,7 @@
         },
         {
             "label": "build-sesion01-tarea",
-            "command": "dotnet",
+            "command": "/home/bryan/.dotnet/dotnet",
             "type": "process",
             "args": [
                 "build",
@@ -27,7 +27,7 @@
         },
         {
             "label": "build-sesion02-reto",
-            "command": "dotnet",
+            "command": "/home/bryan/.dotnet/dotnet",
             "type": "process",
             "args": [
                 "build",
@@ -39,7 +39,7 @@
         },
         {
             "label": "build-sesion02-tarea",
-            "command": "dotnet",
+            "command": "/home/bryan/.dotnet/dotnet",
             "type": "process",
             "args": [
                 "build",
