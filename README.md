@@ -34,3 +34,10 @@ Comparación de 6 instrucciones fundamentales entre los lenguajes abordados dura
 - **`Sesion02/`**: *Decisiones, ciclos y depurador*
   - **`Reto/`**: Simulación de cajero automático con saldo de $500.000, PIN de seguridad (1234 con 3 intentos máx.), y menú de operaciones (consultar saldo, depositar montos positivos y retirar múltiplos de $10.000 hasta el límite de saldo).
   - **`Tarea/`**: Juego de consola "Adivina el número secreto" (1 al 100 con 7 intentos máximos y pistas de mayor/menor mediante `Random.Shared.Next(1, 101)`).
+
+- **`Sesion03/`**: *Métodos, arreglos y cadenas*
+  - **`Reto/`**: Validador interactivo de contraseñas evaluando 6 reglas de seguridad en un método (longitud, mayúsculas, minúsculas, números, caracteres especiales y sin espacios), mostrando símbolos `✔` o `✘`, clasificación de nivel (Fuerte, Media o Débil) y reintentos automáticos.
+  - **`Tarea/`**: Implementación de 2 métodos modulares:
+    1. Generador de usuarios institucionales (primera letra del nombre + primer apellido + últimos 2 dígitos del documento, en minúsculas y sin tildes).
+    2. Analizador de frases (conteo de palabras e inversión del orden de las palabras mediante `StringBuilder`).
+
